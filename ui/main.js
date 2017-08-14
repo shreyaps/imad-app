@@ -15,10 +15,10 @@ button.onclick = function(){
                 span.innerHTML = counter.toString();
             }
         }
-    //not done yet
+    //Not done yet
     
     } ;
-//make request
+//Make request
 request.open('GET', 'http://shreya3112.imad.hasura-app.io/counter', true);
 request.send(null);
 };
