@@ -28,8 +28,7 @@ request.send(null);
 
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
-    var nameInput = document.getElementById('name');
-    var name = nameInput.value;
+    
     //Create a request object
     var request = new XMLHttpRequest();
     
@@ -54,6 +53,8 @@ submit.onclick = function(){
     
 } ;
 //Make request
+var nameInput = document.getElementById('name');
+var name = nameInput.value;
 request.open('GET', 'http://shreya3112.imad.hasura-app.io/submit-name?name' + name, true);
 request.send(null);
     
