@@ -36,14 +36,6 @@ var articles = {
             </p>`
     }
 };
-var names = [];
-app.get('/submit-name/:name', function(req, res){//URL: /submit-name?name=xxxx
-   //Get the name from the request object
-   var name = req.query.name; 
-   names.push(name);
-   //JSON  javascript object notaiton
-   res.send(JSON.stringify(names));
-});
 
 function createTemplate(data){
     var title = data.title;
@@ -92,6 +84,15 @@ var counter = 0;
 app.get('/counter', function(req, res){
     counter = counter + 1;
     res.send(counter.toString());
+});
+
+var names = [];
+app.get('/submit-name/:name', function(req, res){//URL: /submit-name?name=xxxx
+   //Get the name from the request object
+   var name = req.query.name; 
+   names.push(name);
+   //JSON  javascript object notaiton
+   res.send(JSON.stringify(names));
 });
 
 app.get('/:articleName', function(req, res){
