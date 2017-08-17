@@ -54,7 +54,7 @@ submit.onclick = function(){
     
 } ;
 //Make request
-request.open('GET', 'http://shreya3112.imad.hasura-app.io/counter', true);
+request.open('GET', 'http://shreya3112.imad.hasura-app.io/submit-name?name' + name, true);
 request.send(null);
     
 };
