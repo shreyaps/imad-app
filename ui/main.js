@@ -25,10 +25,10 @@ request.send(null);
 
 
 //submit name
-var nameInput = document.getElementById('name');
+
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
-    
+    var nameInput = document.getElementById('name');
     var name = nameInput.value;
     //Create a request object
     var request = new XMLHttpRequest();
