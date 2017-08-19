@@ -121,7 +121,7 @@ app.get('/submit-name', function(req, res){//URL: /submit-name?name=xxxx
 app.get('/articles/:articleName', function(req, res){
     //articleName = article-one
     //Select * FROM article WHERE title = article-one //- is coming as the minus operator so 
-    pool.query("SELECT * FROM article WHERE title = $1" + [req.params.articleName] , function(err, result){
+    pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName] , function(err, result){
         if(err){
             res.status(500).send(err.toString());
         }
