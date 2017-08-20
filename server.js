@@ -94,7 +94,7 @@ app.post('/login', function(req, res){
     var password = req.body.password;
    //take user name and password and enter in DB
    var dbString = hash(password, salt);
-   pool.query('SELECT * FROM "user" username = $1', [username], function(err, result){
+   pool.query('SELECT * FROM "user" WHERE username = $1', [username], function(err, result){
        if(err){
         res.status(500).send(err.toString());
         } else {
