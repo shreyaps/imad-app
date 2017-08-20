@@ -3,7 +3,7 @@ var morgan = require('morgan');//output logs
 var path = require('path');
 var app = express();
 var Pool = require('pg').Pool;
-
+var crypto = require('crypto');
 var config = {
     user: 'shreya3112',
     database: 'shreya3112',
@@ -56,6 +56,14 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+function hash(input, salt){
+    var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
+    return hashed.toString('hex');
+}
+app.get('hash/:input', function(req, res){
+    var hashedString = hash(req.params.input, 'this is a random string');
+    res.send(hashedString);
+})
 var pool = new Pool(config);
 app.get('/test-db', function(req, res){
 //make a select request
