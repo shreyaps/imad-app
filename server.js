@@ -4,6 +4,7 @@ var path = require('path');
 var app = express();
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
+var bodyparser = require('body-parser');
 
 var config = {
     user: 'shreya3112',
@@ -11,9 +12,10 @@ var config = {
     host: 'db.imad.hasura-app.io',
     post: '5432',
     password: process.env.DB_PASSWORD
-}
-app.use(morgan('combined'));
+};
 
+app.use(morgan('combined'));
+app.use(bodyparser.jsom());
 function createTemplate(data){
     var title = data.title;
     var heading  = data.heading;
@@ -64,7 +66,25 @@ function hash(input, salt){
 app.get('/hash/:input', function(req, res){
     var hashedString = hash(req.params.input, 'this is a random string');
     res.send(hashedString);
-})
+});
+
+app.post('/create-user', function(req, res){
+    // username and password
+    
+    //JSOn request
+    var username = req.body.username;
+    var password = req.body.password;
+   //take user name and password and enter in DB
+   var salt = crypto.getRandombytes(128).toString('hex');
+   var dbString = hash(password, salt);
+   pool.query('INSERT INTO user (username, password) values($1, $2)', [username, dbString], function(err, result){
+       if(err){
+        res.status(500).send(err.toString());
+    }else{
+        res.send('User successfully created' + username);
+    }
+   }); 
+});
 var pool = new Pool(config);
 app.get('/test-db', function(req, res){
 //make a select request
