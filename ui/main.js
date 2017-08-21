@@ -24,8 +24,6 @@ submit.onclick = function(){
         }
     }
     //Not done yet
-    
-} ;
 
 //Make request
 var username = document.getElementById('username').value;
@@ -35,3 +33,5 @@ console.log(password);
 request.open('POST', 'http://shreya3112.imad.hasura-app.io/login' , true);
 request.setRequestHeader('Content-Type', 'application/json');
 request.send(JSON.stringify({username: username, password: password}));
+
+} ;
