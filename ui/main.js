@@ -17,7 +17,7 @@ submit.onclick = function(){
             }else if(request.status === 403){
                 alert("username password are invalid");
                 
-            }else(request.status === 500){
+            }else if(request.status === 500){
                 alert("something went wrong at the server");
             }
             
