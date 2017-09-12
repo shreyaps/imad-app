@@ -35,19 +35,23 @@ function createTemplate(data){
                 
                 <body>
                     <div class= "container">
-                    <div>
-                        <a href="/">Home</a>
-                    </div>
-                    <hr/>
-                    <h3>
-                        ${heading}
-                    </h3>
-                    <div>
-                        ${date.toDateString()}
-                    </div>
-                    <div>
-                        ${content}
-                    </div>
+                        <div>
+                            <a href="/">Home</a>
+                        </div>
+                        <hr/>
+                        <h3>
+                            ${heading}
+                        </h3>
+                        <div>
+                            ${date.toDateString()}
+                        </div>
+                        <div>
+                            ${content}
+                        </div>
+                        <div>
+                            <input type = "text" id = "comment" placeholder = "Enter your comment"/>
+                            <input type = "submit" id = "submit_cmnt" />
+                        </div>
                     </div>
                 </body>
             </html>
