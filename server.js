@@ -50,7 +50,7 @@ function createTemplate(data){
                         </div>
                         <hr/>
                         <div>
-                            <h5> Please enter your comments here </h5>
+                            <h4> Please enter your comments here </h4>
                             <input type = "text" id = "comment" placeholder = "Enter your comment"/>
                             <input type = "submit" id = "submit_cmnt" />
                         </div>
