@@ -1,4 +1,39 @@
-//submit username and password
+ if(window.location.href.indexOf("submit-comment") > -1) {
+       alert("your url contains the name franky");
+       
+           //Submit comments
+    var submitComment = document.getElementById('submit_cmnt');
+    submitComment.onclick = function(){
+        
+        //create xml hhtp request
+        var sbmtRequest = new XmlHttpRequest();
+        
+        sbmtRequest.onreadystatechange = function(){
+            alert("onreadystatechange - changed, submit comment clicked");
+            if(sbmtRequest.readyState === XmlHttpRequest.DONE){
+                if(sbmtRequest.state === 200){
+                    
+                    var comments = ["Comment 1 ", "Comment 2", "Comment 3"];
+                    for (j = 0; j < comments.length; j++){
+                        
+                        var com = "<li>" + comments[i] + "</li>";
+                        
+                        document.getElementById('commentId').innerHTML=com;
+                        
+                        
+                    }
+                    
+                }
+            }
+        };
+    };
+sbmtRequest.open('GET', 'http://shreya3112.imad.hasura-app.io//submit-comment' , true);
+sbmtRequest.send(null);
+    
+}
+else{
+    
+    //submit username and password
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     
@@ -22,37 +57,6 @@ submit.onclick = function(){
             
         }
     };
-    //Not done yet
-//var commentBox = document.getElementByid('comment');
-
-//Submit comments
-var submitComment = document.getElementById('submit_cmnt');
-submitComment.onclick = function(){
-    
-    //create xml hhtp request
-    var sbmtRequest = new XmlHttpRequest();
-    
-    sbmtRequest.onreadystatechange = function(){
-        alert("onreadystatechange - changed, submit comment clicked")
-        if(sbmtRequest.readyState === XmlHttpRequest.DONE){
-            if(sbmtRequest.state === 200){
-                
-                var comments = ["Comment 1 ", "Comment 2", "Comment 3"];
-                for (j = 0; j < comments.length; j++){
-                    
-                    var com = "<li>" + comments[i] + "</li>";
-                    
-                    document.getElementById('commentId').innerHTML=com;
-                    
-                    
-                }
-                
-            }
-        }
-    };
-    
-};
-
 
 //Make request
 var username = document.getElementById('username').value;
@@ -63,7 +67,9 @@ request.open('POST', 'http://shreya3112.imad.hasura-app.io/login' , true);
 request.setRequestHeader('Content-Type', 'application/json');
 request.send(JSON.stringify({username: username, password: password}));
 
-sbmtRequest.open('GET', 'http://shreya3112.imad.hasura-app.io//submit-comment' , true);
-sbmtRequest.send(null);
+};
 
-} ;
+  
+//var commentBox = document.getElementByid('comment');
+
+} 
