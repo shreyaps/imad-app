@@ -33,6 +33,7 @@ submitComment.onclick = function(){
     var sbmtRequest = new XmlHttpRequest();
     
     sbmtRequest.onreadystatechange = function(){
+        alert("onreadystatechange - changed, submit comment clicked")
         if(sbmtRequest.readyState === XmlHttpRequest.DONE){
             if(sbmtRequest.state === 200){
                 
