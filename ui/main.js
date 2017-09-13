@@ -5,9 +5,6 @@ if(window.location.href.indexOf("articles") > -1) {
     var submitComment = document.getElementById('submit_cmnt');
     submitComment.onclick = function(){
         
-    var commentInpt = document.getElementById(commentInput);
-    var comment = commentInpt.value;
-        
         //create xml hhtp request
         var sbmtRequest = new XMLHttpRequest();
         
@@ -33,9 +30,10 @@ if(window.location.href.indexOf("articles") > -1) {
             
         };
         
-    
+    var commentInpt = document.getElementById(commentInput);
+    var comment = commentInpt.value;
     sbmtRequest.open('GET', 'http://shreya3112.imad.hasura-app.io/submit-comment' + comment, true);
-        sbmtRequest.send(null);
+    sbmtRequest.send(null);
     };
 
     
