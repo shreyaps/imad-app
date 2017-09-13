@@ -1,8 +1,8 @@
 //Checking if the url contains  'articles'
 if(window.location.href.indexOf("articles") > -1) {
        
-    var commentInput = document.getElementById(commentInput);
-    var comment = commentInput.value;
+    var commentInpt = document.getElementById(commentInput);
+    var comment = commentInpt.value;
     
     //Submit comments
     var submitComment = document.getElementById('submit_cmnt');
