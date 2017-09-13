@@ -1,9 +1,10 @@
- if(window.location.href.indexOf("articles") > -1) {
-       alert("your url contains the name franky");
+//Checking if the url contains  'articles'
+if(window.location.href.indexOf("articles") > -1) {
        
            //Submit comments
     var submitComment = document.getElementById('submit_cmnt');
     submitComment.onclick = function(){
+        alert("submit button clicked");
         
         //create xml hhtp request
         var sbmtRequest = new XMLHttpRequest();
