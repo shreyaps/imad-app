@@ -37,7 +37,7 @@ submitComment.onclick = function(){
             if(sbmtRequest.state === 200){
                 
                 var comments = ["Comment 1 ", "Comment 2", "Comment 3"];
-                for (i = 0; i < comments.length; i++){
+                for (j = 0; j < comments.length; j++){
                     
                     var com = "<li>" + comments[i] + "</li>";
                     
