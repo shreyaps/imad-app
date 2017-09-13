@@ -10,7 +10,7 @@
         
         sbmtRequest.onreadystatechange = function(){
             alert("onreadystatechange - changed, submit comment clicked");
-            if(sbmtRequest.readyState === XmlHttpRequest.DONE){
+            if(sbmtRequest.readyState === XmlHttpRequest.DONE()){
                 if(sbmtRequest.state === 200){
                     
                     var comments = ["Comment 1 ", "Comment 2", "Comment 3"];
