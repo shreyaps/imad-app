@@ -158,7 +158,7 @@ app.get('/submit-name', function(req, res){//URL: /submit-name?name=xxxx
    res.send(JSON.stringify(names));
 });
 
-var comments = [];
+var comment = [];
 app.get('/submit-comment', function(req, res){
    
    //Get the comment from the request object
