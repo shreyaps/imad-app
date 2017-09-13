@@ -30,9 +30,9 @@ if(window.location.href.indexOf("articles") > -1) {
             
         };
         
-    var commentInpt = document.getElementById('commentInput');
-    var comment = commentInpt.value;
-    sbmtRequest.open('GET', 'http://shreya3112.imad.hasura-app.io/submit-comment' + comment, true);
+    var commentBox = document.getElementById('commentInput');
+    var comment = commentBox.value;
+    sbmtRequest.open('GET', 'http://shreya3112.imad.hasura-app.io/submit-comment?comment=' + comment, true);
     sbmtRequest.send(null);
     };
 
@@ -76,7 +76,5 @@ request.send(JSON.stringify({username: username, password: password}));
 
 };
 
-  
-//var commentBox = document.getElementByid('comment');
 
 } 
