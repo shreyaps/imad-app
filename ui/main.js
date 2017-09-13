@@ -17,7 +17,7 @@ if(window.location.href.indexOf("articles") > -1) {
                     var comList = ''; 
                     for (j = 0; j < comments.length; j++){
                         
-                        comList += "<li>" + comments[i] + "</li>";
+                        comList += "<li>" + comments[j] + "</li>";
                         
                     }
                 var ul = document.getElementById('commentId');
