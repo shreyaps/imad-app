@@ -39,10 +39,9 @@ submitComment.onclick = function(){
                 var comments = ["Comment 1 ", "Comment 2", "Comment 3"];
                 for (i = 0; i < comments.length; i++){
                     
-                    var com = "<li>" + comments[i] + "</li>";
+                    var com = "<ul>" + comments[i] + "</ul>";
                     
-                    document.getElementById('comments').innerHTML=com;
-                    
+                    document.getElementById('commentId').innerHTML=com;
                     
                     
                 }
