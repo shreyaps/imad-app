@@ -55,9 +55,9 @@ function createTemplate(data){
                             <input type = "submit" id = "submit_cmnt" />
                             <h5>Comments</h5>
                             <div>
-                                <ol>Comment 1</ol>
-                                <ol>Comment 2</ol>
-                                <ol>Comment 3</ol>
+                                <ul>Comment 1</ul>
+                                <ul>Comment 2</ul>
+                                <ul>Comment 3</ul>
                             </div>
                         </div>
                     </div>
