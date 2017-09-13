@@ -163,7 +163,7 @@ app.get('/submit-comment', function(req, res){
    //Get the comment from the request object
    var comment = req.query.comment;
    //comment.push(com);
-    res.send(JSON.stringify(com));
+    res.send(JSON.stringify(comment));
     
 });
 
