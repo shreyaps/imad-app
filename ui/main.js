@@ -6,12 +6,12 @@ if(window.location.href.indexOf("articles") > -1) {
     submitComment.onclick = function(){
         
         //create xml hhtp request
-       // var sbmtRequest = new XMLHttpRequest();
+        var sbmtRequest = new XMLHttpRequest();
         
-        //sbmtRequest.onreadystatechange = function(){
+        sbmtRequest.onreadystatechange = function(){
             
-            //if(sbmtRequest.readyState === XMLHttpRequest.DONE){
-              //  if(sbmtRequest.state === 200){
+            if(sbmtRequest.readyState === XMLHttpRequest.DONE){
+                if(sbmtRequest.state === 200){
                     
                     var comments = ["Comment 1 ", "Comment 2", "Comment 3"];
                     var comList = ''; 
@@ -24,15 +24,16 @@ if(window.location.href.indexOf("articles") > -1) {
                 ul.innerHTML = comList;
                 
                     
-                };
-          //  }
-       // sbmtRequest.open('GET', 'http://shreya3112.imad.hasura-app.io//submit-comment' , true);
-        //sbmtRequest.send(null);
-            
-        //};
-    //};
+                }
+            }
 var commentInpt = document.getElementById(commentInput);
     var comment = commentInpt.value;
+    sbmtRequest.open('GET', 'http://shreya3112.imad.hasura-app.io/submit-comment' + comment, true);
+        sbmtRequest.send(null);
+            
+        };
+    };
+
     
 }
 else{
