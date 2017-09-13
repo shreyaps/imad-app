@@ -25,10 +25,12 @@
                     
                 }
             }
+        sbmtRequest.open('GET', 'http://shreya3112.imad.hasura-app.io//submit-comment' , true);
+        sbmtRequest.send(null);
+            
         };
     };
-sbmtRequest.open('GET', 'http://shreya3112.imad.hasura-app.io//submit-comment' , true);
-sbmtRequest.send(null);
+
     
 }
 else{
