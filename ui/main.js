@@ -1,8 +1,5 @@
 //Checking if the url contains  'articles'
 if(window.location.href.indexOf("articles") > -1) {
-       
-    var commentInpt = document.getElementById(commentInput);
-    var comment = commentInpt.value;
     
     //Submit comments
     var submitComment = document.getElementById('submit_cmnt');
@@ -34,7 +31,8 @@ if(window.location.href.indexOf("articles") > -1) {
             
         //};
     //};
-
+var commentInpt = document.getElementById(commentInput);
+    var comment = commentInpt.value;
     
 }
 else{
