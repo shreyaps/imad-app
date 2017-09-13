@@ -53,6 +53,12 @@ function createTemplate(data){
                             <h4> Please enter your comments here </h4>
                             <input type = "text" id = "comment" placeholder = "Enter your comment"/>
                             <input type = "submit" id = "submit_cmnt" />
+                            <h5>Comments</h5>
+                            <div>
+                                <ol></ol>
+                                <ol></ol>
+                                <ol></ol>
+                            </div>
                         </div>
                     </div>
                 </body>
@@ -65,6 +71,7 @@ function createTemplate(data){
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
 
 function hash(input, salt){
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
@@ -150,6 +157,7 @@ app.get('/submit-name', function(req, res){//URL: /submit-name?name=xxxx
    //JSON  javascript object notaiton
    res.send(JSON.stringify(names));
 });
+
 
 app.get('/articles/:articleName', function(req, res){
     //articleName = article-one
