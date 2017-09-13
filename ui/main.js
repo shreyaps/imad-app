@@ -1,36 +1,39 @@
 //Checking if the url contains  'articles'
 if(window.location.href.indexOf("articles") > -1) {
        
-           //Submit comments
+    var commentInput = document.getElementById(commentInput);
+    var comment = commentInput.value;
+    
+    //Submit comments
     var submitComment = document.getElementById('submit_cmnt');
     submitComment.onclick = function(){
-        alert("submit button clicked");
         
         //create xml hhtp request
-        var sbmtRequest = new XMLHttpRequest();
+       // var sbmtRequest = new XMLHttpRequest();
         
-        sbmtRequest.onreadystatechange = function(){
+        //sbmtRequest.onreadystatechange = function(){
             
-            if(sbmtRequest.readyState === XMLHttpRequest.DONE){
-                if(sbmtRequest.state === 200){
+            //if(sbmtRequest.readyState === XMLHttpRequest.DONE){
+              //  if(sbmtRequest.state === 200){
                     
                     var comments = ["Comment 1 ", "Comment 2", "Comment 3"];
+                    var comList = ''; 
                     for (j = 0; j < comments.length; j++){
                         
-                        var com = "<li>" + comments[i] + "</li>";
-                        
-                        document.getElementById('commentId').innerHTML=com;
-                        
+                        comList += "<li>" + comments[i] + "</li>";
                         
                     }
+                var ul = document.getElementById('commentId');
+                ul.innerHTML = comList;
+                
                     
-                }
-            }
-        sbmtRequest.open('GET', 'http://shreya3112.imad.hasura-app.io//submit-comment' , true);
-        sbmtRequest.send(null);
+                };
+          //  }
+       // sbmtRequest.open('GET', 'http://shreya3112.imad.hasura-app.io//submit-comment' , true);
+        //sbmtRequest.send(null);
             
-        };
-    };
+        //};
+    //};
 
     
 }
