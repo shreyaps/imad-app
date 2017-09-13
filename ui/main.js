@@ -10,8 +10,8 @@ if(window.location.href.indexOf("articles") > -1) {
         var sbmtRequest = new XMLHttpRequest();
         
         sbmtRequest.onreadystatechange = function(){
-            alert("onreadystatechange - changed, submit comment clicked");
-            if(sbmtRequest.readyState === XMLHttpRequest.DONE()){
+            
+            if(sbmtRequest.readyState === XMLHttpRequest.DONE){
                 if(sbmtRequest.state === 200){
                     
                     var comments = ["Comment 1 ", "Comment 2", "Comment 3"];
