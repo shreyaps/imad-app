@@ -23,6 +23,32 @@ submit.onclick = function(){
         }
     }
     //Not done yet
+//var commentBox = document.getElementByid('comment');
+var comments = ["Comment 1 ", "Comment 2", "Comment 3"];
+for (i = 0; i < comments.length; i++){
+    
+    
+    
+}
+
+/*    
+//Submit comments
+var submitComment = document.getElementById('submit_cmnt');
+submitComment.onclick = function(){
+    
+    //create xml hhtp request
+    var request = new XmlHttpRequest();
+    
+    request.onreadystatechange = function(){
+        if(request.readyState === XmlHttpRequest.DONE){
+            if(request.state === 200){
+                
+            }
+        }
+    }
+    
+}
+*/
 
 //Make request
 var username = document.getElementById('username').value;
