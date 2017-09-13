@@ -1,4 +1,4 @@
- if(window.location.href.indexOf("submit-comment") > -1) {
+ if(window.location.href.indexOf("articles") > -1) {
        alert("your url contains the name franky");
        
            //Submit comments
