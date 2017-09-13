@@ -51,8 +51,8 @@ function createTemplate(data){
                         <hr/>
                         <div class="comments">
                             <h4> Please enter your comments here </h4>
-                            <input type = "text" id = "commentInput" placeholder = "Enter your comment"/>
-                            <input type = "submit" id = "submit_cmnt" />
+                            <input type = "text" id="commentInput" placeholder = "Enter your comment"/>
+                            <input type = "submit" id="submit_cmnt" />
                             <h5>Comments</h5>
                             <ul id="commentId">
                                 
