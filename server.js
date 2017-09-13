@@ -54,7 +54,7 @@ function createTemplate(data){
                             <input type = "text" id = "comment" placeholder = "Enter your comment"/>
                             <input type = "submit" id = "submit_cmnt" />
                             <h5>Comments</h5>
-                            <div id=comments
+                            <div id=commentId
                                 <ul></ul>
                                 <ul></ul>
                                 <ul></ul>
