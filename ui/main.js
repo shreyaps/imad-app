@@ -30,16 +30,16 @@ var submitComment = document.getElementById('submit_cmnt');
 submitComment.onclick = function(){
     
     //create xml hhtp request
-    var request = new XmlHttpRequest();
+    var sbmtRequest = new XmlHttpRequest();
     
-    request.onreadystatechange = function(){
-        if(request.readyState === XmlHttpRequest.DONE){
-            if(request.state === 200){
+    sbmtRequest.onreadystatechange = function(){
+        if(sbmtRequest.readyState === XmlHttpRequest.DONE){
+            if(sbmtRequest.state === 200){
                 
                 var comments = ["Comment 1 ", "Comment 2", "Comment 3"];
                 for (i = 0; i < comments.length; i++){
                     
-                    var com = "<ul>" + comments[i] + "</ul>";
+                    var com = "<li>" + comments[i] + "</li>";
                     
                     document.getElementById('commentId').innerHTML=com;
                     
@@ -61,5 +61,8 @@ console.log(password);
 request.open('POST', 'http://shreya3112.imad.hasura-app.io/login' , true);
 request.setRequestHeader('Content-Type', 'application/json');
 request.send(JSON.stringify({username: username, password: password}));
+
+sbmtRequest.open('GET', 'http://shreya3112.imad.hasura-app.io//submit-comment' , true);
+sbmtRequest.send(null);
 
 } ;
