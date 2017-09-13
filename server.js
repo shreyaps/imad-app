@@ -61,6 +61,8 @@ function createTemplate(data){
                             
                         </div>
                     </div>
+                    <script type="text/javascript" src="/ui/main.js">
+                    </script>
                 </body>
             </html>
                     `;
@@ -159,7 +161,7 @@ app.get('/submit-name', function(req, res){//URL: /submit-name?name=xxxx
 });
 
 var comment = [];
-app.get('/submit-comment', function(req, res){
+app.get('/submit-comment', function(req, res){//URL: /submit-comment?comment=xxxx
    
    //Get the comment from the request object
     var comments = req.query.comment;
