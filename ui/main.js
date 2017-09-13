@@ -30,7 +30,7 @@ if(window.location.href.indexOf("articles") > -1) {
             
         };
         
-    var commentInpt = document.getElementById(commentInput);
+    var commentInpt = document.getElementById('commentInput');
     var comment = commentInpt.value;
     sbmtRequest.open('GET', 'http://shreya3112.imad.hasura-app.io/submit-comment' + comment, true);
     sbmtRequest.send(null);
