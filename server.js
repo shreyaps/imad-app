@@ -49,16 +49,16 @@ function createTemplate(data){
                             ${content}
                         </div>
                         <hr/>
-                        <div>
+                        <div class="comments">
                             <h4> Please enter your comments here </h4>
                             <input type = "text" id = "comment" placeholder = "Enter your comment"/>
                             <input type = "submit" id = "submit_cmnt" />
                             <h5>Comments</h5>
-                            <div id=commentId
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </div>    
+                            <ul>
+                                <li>comment 1</li>
+                                <li>comment 2</li>
+                                <li>comment 3</li>
+                            </ul>    
                             
                         </div>
                     </div>
