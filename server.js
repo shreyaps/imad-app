@@ -162,8 +162,8 @@ var comment = [];
 app.get('/submit-comment', function(req, res){
    
    //Get the comment from the request object
-    var comment = req.query.comment;
-    comment.push(comment);
+    var comments = req.query.comment;
+    comment.push(comments);
     res.send(JSON.stringify(comment));
     
 });
