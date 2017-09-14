@@ -24,7 +24,6 @@ if(window.location.href.indexOf("articles") > -1) {
                 var ul = document.getElementById('commentId');
                 ul.innerHTML = comList;
                 
-                    
                 }
             }
             
